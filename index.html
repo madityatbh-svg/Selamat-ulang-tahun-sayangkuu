@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun, Sayangku ❤️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #feada6 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+
+        /* Container Pembuka */
+        .start-btn-container {
+            text-align: center;
+            z-index: 10;
+        }
+
+        .btn-start {
+            background-color: #ff4b2b;
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(255, 75, 43, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse 1.5s infinite;
+        }
+
+        .btn-start:hover {
+            transform: scale(1.08);
+            background-color: #ff416c;
+        }
+
+        /* Kartu Utama */
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            max-width: 550px;
+            width: 100%;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            text-align: center;
+            display: none;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h1 {
+            color: #d63384;
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+        }
+
+        .sub-title {
+            color: #6c757d;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .heart-icon {
+            font-size: 3rem;
+            color: #e63946;
+            margin: 15px 0;
+            animation: beat 1s infinite alternate;
+        }
+
+        .romantic-text {
+            color: #495057;
+            line-height: 1.8;
+            font-size: 1rem;
+            text-align: justify;
+            margin-bottom: 20px;
+            background: #fff5f7;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #ff416c;
+        }
+
+        .btn-music {
+            display: block;
+            width: 100%;
+            background-color: #ff0000;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            font-weight: bold;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+            transition: background 0.3s ease;
+        }
+
+        .btn-music:hover {
+            background-color: #cc0000;
+        }
+
+        .btn-wa {
+            display: block;
+            width: 100%;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+            transition: background 0.3s ease;
+        }
+
+        .btn-wa:hover {
+            background-color: #1eb854;
+        }
+
+        /* Animasi Hati Terbang */
+        .hearts-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .heart-fall {
+            position: absolute;
+            top: -10%;
+            color: #ff4b2b;
+            font-size: 1.5rem;
+            opacity: 0.7;
+            animation: fall 5s linear infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes beat {
+            to { transform: scale(1.2); }
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tombol Mulai Pembuka -->
+    <div class="start-btn-container" id="startContainer">
+        <button class="btn-start" onclick="startSurprise()">Buka Hadiah Spesial Dari Aku ❤️</button>
+    </div>
+
+    <!-- Kontainer Hati Jatuh -->
+    <div class="hearts-bg" id="heartsBg"></div>
+
+    <!-- Kartu Ucapan Romantis -->
+    <div class="card" id="mainCard">
+        <div class="heart-icon">💖</div>
+        <h1>Selamat Ulang Tahun, Sayang! 🎉</h1>
+        <p class="sub-title">Spesial untukmu di tanggal 11 November ✨</p>
+        
+        <div class="romantic-text">
+            Selamat bertambah usia untuk manusia paling spesial di hidupku! ❤️<br><br>
+            Terima kasih ya sudah lahir ke dunia dan menghiasi hariku dengan senyumanmu. Bersamamu rasanya tenang banget, persis seperti lagu Nadhif Basalamah. Aku berharap segala impianmu perlahan bisa terwujud, dan semoga kita bisa terus melangkah bareng, saling menggenggam, dan rasa ini akan selalu <b>bergema selamanya</b>.<br><br>
+            Jangan pernah ragu buat bersandar di bahuku kapan pun kamu lelah. Selamat ulang tahun ya, manisku. I love you so much! 🌹
+        </div>
+
+        <!-- Tombol Putar Lagu di YouTube -->
+        <a href="https://www.youtube.com/results?search_query=Nadhif+Basalamah+Bergema+Selamanya" class="btn-music" target="_blank">
+            🎵 Putar Lagu "Bergema Selamanya"
+        </a>
+
+        <!-- Tombol Kirim Balasan ke WhatsApp -->
+        <a id="waLink" class="btn-wa" target="_blank">
+            💬 Balas Pesan ke WhatsApp Aku
+        </a>
+    </div>
+
+    <script>
+        function startSurprise() {
+            document.getElementById('startContainer').style.display = 'none';
+            const card = document.getElementById('mainCard');
+            card.classList.add('active');
+            createHearts();
+            setupWaLink();
+        }
+
+        function setupWaLink() {
+            const phone = "6288279207004";
+            const message = encodeURIComponent("Makasih ya sayang ucapan ulang tahunnya romantis banget! ❤️ Aku juga sayang banget sama kamu, semoga kita bersama terus selamanya! 🥰✨");
+            document.getElementById('waLink').href = `https://wa.me/${phone}?text=${message}`;
+        }
+
+        function createHearts() {
+            const container = document.getElementById('heartsBg');
+            const icons = ['❤️', '💖', '🌸', '✨', '💕'];
+            
+            setInterval(() => {
+                const heart = document.createElement('div');
+                heart.classList.add('heart-fall');
+                heart.innerText = icons[Math.floor(Math.random() * icons.length)];
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = Math.random() * 3 + 3 + 's';
+                heart.style.fontSize = Math.random() * 15 + 15 + 'px';
+                
+                container.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 6000);
+            }, 300);
+        }
+    </script>
+</body>
+</html>
